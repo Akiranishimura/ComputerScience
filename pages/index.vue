@@ -118,7 +118,7 @@ export default {
     adjustDate() {
       //入力された日付をyyyy/mm/ddへ移す
       if (this.mm <= 3) {
-        this.yyyy = 2023;
+        this.yyyy = 2024;
       } else {
         this.yyyy = 2022;
       }
@@ -136,31 +136,25 @@ export default {
       this.string = year + "/" + month + "/" + day;
       console.log(this.string);
       //祝日か否か
-      if (this.string >= "2022/08/07" && this.string <= "2022/09/11") {
+      if (this.string >= "2022/08/06" && this.string <= "2022/09/13") {
         this.alart = "夏休みです！";
       }
-      if (this.string >= "2022/12/25" && this.string <= "2023/01/09") {
+      if (this.string >= "2022/12/24" && this.string <= "2023/01/014") {
         this.alart = "冬休みです！";
       }
-      if (this.string >= "2023/1/29") {
+      if (this.string >= "2023/1/27") {
         this.alart = "春休みです！";
       }
       const holidays = [
-        "2022/05/02",
+        "2022/04/29",
         "2022/05/03",
         "2022/05/04",
         "2022/05/05",
-        "2022/07/22",
+        "2022/07/18",
         "2022/07/23",
-        "2022/11/03",
-        "2022/11/22",
         "2022/11/23",
         "2022/11/25",
         "2022/11/28",
-        "2023/01/10",
-        "2023/01/11",
-        "2023/01/12",
-        "2023/01/13",
       ];
       if (holidays.includes(this.string)) {
         this.alart = "祝日のためお休みです！珍しい！";
